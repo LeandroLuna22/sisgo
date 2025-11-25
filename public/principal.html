@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Página Principal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav id="menu"></nav>
+
+<h1>Bem-vindo(a)!</h1>
+<p>Conteúdo da página principal.</p>
+
+<script>
+fetch('/user')
+  .then(res => res.json())
+  .then(user => {
+    const menu = document.getElementById('menu');
+    let links = [
+      '<a href="/visualizar-notas.html">Visualizar Notas</a>',
+      '<a href="/visualizar-ordens.html">Visualizar Ordens</a>'
+    ];
+    
+    if(user.tipo === 'admin') {
+      links.unshift('<a href="/criar-nota.html">Criar Nota</a>', '<a href="/cadastro.html">Cadastrar Usuário</a>');
+    }
+    
+    links.push('<a href="/logout">Logout</a>');
+    menu.innerHTML = links.join('');
+  });
+</script>
+
+</body>
+</html>

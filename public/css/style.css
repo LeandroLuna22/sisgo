@@ -5,10 +5,11 @@ body {
 }
 
 .container {
+  text-align: center;
   width: 300px;
   margin: auto;
   background: white;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px #ccc;
   margin-bottom: 30px;
@@ -37,7 +38,6 @@ button:hover {
 }
 
 nav {
-  background: #3498db;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -73,6 +73,7 @@ nav a:hover {
   font-size: 16px;
   font-weight: 600;
   transition: 0.2s;
+  margin: 0 auto;
 }
 
 .btn-menu:hover {

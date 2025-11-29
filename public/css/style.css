@@ -1,7 +1,12 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background: #f3f3f3;
   padding: 20px;
+  color: #585858;
+}
+
+h1 {
+  font-size: 22px;
 }
 
 /* Caixa do formulário */
@@ -11,17 +16,18 @@ body {
   background: white;
   padding: 30px;
   border-radius: 8px;
+  border: 1px solid #0A4FFF;
   box-shadow: 0 0 10px #ccc;
   margin-bottom: 30px;
 }
 
-/* Centralizar somente o título */
+/* Centralizar título do formulário */
 .container h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Formulário organizado e alinhado */
+/* Formulário */
 form {
   display: flex;
   flex-direction: column;
@@ -37,22 +43,22 @@ input, select {
   box-sizing: border-box;
 }
 
-/* Botão */
+/* Botões de formulário */
 button {
   width: 100%;
-  padding: 10px;
-  background: #3498db;
-  color: white;
-  border: none;
+  padding: 12px;
+  background: #ffffff;
+  color: #0A4FFF;
+  border: 1px solid #0A4FFF;
   border-radius: 4px;
   cursor: pointer;
 }
-
 button:hover {
-  background: #2980b9;
+  background: #0A4FFF;
+  color: white;
 }
 
-/* Menu (se for usado em outra página) */
+/* Menu */
 #menu {
   display: flex;
   flex-direction: column;
@@ -61,70 +67,74 @@ button:hover {
   margin: 20px auto;
 }
 
+/* Botões do menu — isolados */
+.btn-menu, .btn-cadastro, .btn-sair {
+  display: block;
+  width: 200px;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  margin: 0 auto;
+  border: 1px solid;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Botão azul */
 .btn-menu {
-  display: block;
-  width: 200px;
-  background: #ffffff;
-  color: rgb(5, 4, 99);
-  border: 1px solid darkblue;
-  padding: 12px 0;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.2s;
-  margin: 0 auto;
+  color: #0A4FFF;
+  border-color: #0A4FFF;
 }
-
-.btn-sair {
-  display: block;
-  width: 200px;
-  background: #f37676;
-  color: rgb(94, 2, 2);
-  padding: 12px 0;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.2s;
-  margin: 0 auto;
-}
-
-.btn-cadastro {
-  display: block;
-  width: 200px;
-  background: #78d674;
-  color: rgb(1, 59, 30);
-  padding: 12px 0;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.2s;
-  margin: 0 auto;
-}
-
 .btn-menu:hover {
-  background: #0738b3;
+  background: #0A4FFF;
+  color: white;
 }
 
+/* Botão verde */
+.btn-cadastro {
+  color: #178d3f;
+  border-color: #178d3f;
+}
+.btn-cadastro:hover {
+  background: #178d3f;
+  color: white;
+}
+
+.btn-cad {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 10px 0;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #585858;
+  border: 1px solid #585858;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cad:hover {
+  background: #585858;
+  color: white;
+}
+
+/* Botão vermelho */
+.btn-sair {
+  color: #a33434;
+  border-color: #a33434;
+}
 .btn-sair:hover {
   background: #a33434;
-  color: #ffffff;
+  color: white;
 }
 
-.btn-cadastro:hover {
-  background: #17792f;
-  color: #ffffff;
-}
-
-button:hover {
-  background: #2980b9;
-}
-
+/* Nav genérico */
 nav {
   padding: 10px;
   border-radius: 5px;
@@ -132,20 +142,6 @@ nav {
 }
 
 nav a {
-  color: white;
-  margin-right: 15px;
   text-decoration: none;
   font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-#menu {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 250px;
-  margin: 20px auto;
 }

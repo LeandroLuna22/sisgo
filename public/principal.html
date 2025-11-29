@@ -7,33 +7,39 @@
 </head>
 <body>
 
-<h1>SisGO</h1>
+<h1 id="bem-vindo">SisGO</h1>
 
-<nav id="menu"></nav>
+  <nav id="menu"></nav>
 
 <script>
 fetch('/user')
   .then(res => res.json())
   .then(user => {
-    const menu = document.getElementById('menu');
+    // Atualiza frase de boas-vindas
+    const h1 = document.getElementById('bem-vindo');
+    h1.textContent = `Bem vindo ao SisGO ${user.nome}.`;
 
-    let links = [
-      '<a class="btn-menu" href="/visualizar-notas.html">Visualizar Notas</a>',
-      '<a class="btn-menu" href="/visualizar-ordens.html">Visualizar Ordens</a>'
+    // Define os botões como objetos
+    const allButtons = [
+      { label: "Criar Nota", href: "/criar-nota.html", class: "btn-menu", roles: ["admin"] },
+      { label: "Abrir Ordem", href: "/abrir-ordem.html", class: "btn-menu", roles: ["admin"] },
+      { label: "Visualizar Notas", href: "/visualizar-notas.html", class: "btn-menu", roles: ["usuario", "admin"] },
+      { label: "Visualizar Ordens", href: "/visualizar-ordens.html", class: "btn-menu", roles: ["usuario", "admin"] },
+      { label: "Cadastrar Usuário", href: "/cadastro.html", class: "btn-cadastro", roles: ["admin"] },
+      { label: "Logout", href: "/logout", class: "btn-sair", roles: ["usuario", "admin"] }
     ];
-    
-    if(user.tipo === 'admin') {
-      links.unshift(
-        '<a class="btn-menu" href="/criar-nota.html">Criar Nota</a>',
-        '<a class="btn-menu" href="/abrir-ordem.html">Abrir Ordem</a>',
-        '<a class="btn-cadastro" href="/cadastro.html">Cadastrar Usuário</a>'
-      );
-    }
-    
-    links.push('<a class="btn-sair" href="/logout">Logout</a>');
-    menu.innerHTML = links.join('');
+
+    // Filtra os botões conforme o tipo do usuário
+    const buttonsToShow = allButtons.filter(btn => btn.roles.includes(user.tipo));
+
+    // Renderiza os botões no menu
+    const menu = document.getElementById('menu');
+    menu.innerHTML = buttonsToShow
+      .map(btn => `<a class="${btn.class}" href="${btn.href}">${btn.label}</a>`)
+      .join('');
   });
 </script>
 
 </body>
 </html>
+

@@ -64,8 +64,9 @@ button:hover {
 .btn-menu {
   display: block;
   width: 200px;
-  background: #0A4FFF;
-  color: white;
+  background: #ffffff;
+  color: rgb(5, 4, 99);
+  border: 1px solid darkblue;
   padding: 12px 0;
   text-align: center;
   border-radius: 8px;
@@ -147,23 +148,4 @@ nav a:hover {
   gap: 12px;
   width: 250px;
   margin: 20px auto;
-}
-
-.btn-menu {
-  display: block;
-  width: 200px;
-  background: #0A4FFF;
-  color: white;
-  padding: 12px 0;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  transition: 0.2s;
-  margin: 0 auto;
-}
-
-.btn-menu:hover {
-  background: #0738b3;
 }

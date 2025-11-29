@@ -76,10 +76,49 @@ button:hover {
   margin: 0 auto;
 }
 
+.btn-sair {
+  display: block;
+  width: 200px;
+  background: #f37676;
+  color: rgb(94, 2, 2);
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+  margin: 0 auto;
+}
+
+.btn-cadastro {
+  display: block;
+  width: 200px;
+  background: #78d674;
+  color: rgb(1, 59, 30);
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s;
+  margin: 0 auto;
+}
+
 .btn-menu:hover {
   background: #0738b3;
 }
 
+.btn-sair:hover {
+  background: #a33434;
+  color: #ffffff;
+}
+
+.btn-cadastro:hover {
+  background: #17792f;
+  color: #ffffff;
+}
 
 button:hover {
   background: #2980b9;

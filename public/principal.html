@@ -25,11 +25,12 @@ fetch('/user')
     if(user.tipo === 'admin') {
       links.unshift(
         '<a class="btn-menu" href="/criar-nota.html">Criar Nota</a>',
-        '<a class="btn-menu" href="/cadastro.html">Cadastrar Usuário</a>'
+        '<a class="btn-menu" href="/abrir-ordem.html">Abrir Ordem</a>',
+        '<a class="btn-cadastro" href="/cadastro.html">Cadastrar Usuário</a>'
       );
     }
     
-    links.push('<a class="btn-menu" href="/logout">Logout</a>');
+    links.push('<a class="btn-sair" href="/logout">Logout</a>');
     menu.innerHTML = links.join('');
   });
 </script>

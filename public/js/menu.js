@@ -25,14 +25,18 @@ fetch('/user')
           <span>➕</span> Criar Nota
         </a>
 
-        <a class="menu-btn" href="/cadastro.html">
+        <a class="menu-btn" href="/abrir-ordem.html">
+          <span>➕</span> Abrir Ordem
+        </a>
+
+        <a class="menu-cadastro" href="/cadastro.html">
           <span>👤</span> Cadastrar Usuário
         </a>
         ` + links;
     }
 
     links += `
-      <a class="menu-btn logout" href="/logout">
+      <a class="menu-sair logout" href="/logout">
         <span>🚪</span> Sair
       </a>
     `;

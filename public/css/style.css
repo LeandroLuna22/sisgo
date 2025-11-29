@@ -64,9 +64,10 @@ nav a:hover {
 
 .btn-menu {
   display: block;
+  width: 200px;
   background: #0A4FFF;
   color: white;
-  padding: 12px 18px;
+  padding: 12px 0;
   text-align: center;
   border-radius: 8px;
   text-decoration: none;

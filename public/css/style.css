@@ -48,13 +48,13 @@ button {
   width: 100%;
   padding: 12px;
   background: #ffffff;
-  color: #0A4FFF;
-  border: 1px solid #0A4FFF;
+  color: #002279;
+  border: 1px solid #002279;
   border-radius: 4px;
   cursor: pointer;
 }
 button:hover {
-  background: #0A4FFF;
+  background: #002279;
   color: white;
 }
 
@@ -62,23 +62,23 @@ button:hover {
 #menu {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 250px;
+  gap: 10px;
+  width: 100%;
   margin: 20px auto;
 }
 
 /* Botões do menu — isolados */
 .btn-menu, .btn-cadastro, .btn-sair {
   display: block;
-  width: 200px;
+  width: 100%;
   padding: 12px 0;
   text-align: center;
   border-radius: 8px;
   text-decoration: none;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.3s;
-  margin: 0 auto;
+  margin: 0px 0px 0px -12px;
   border: 1px solid;
   background: transparent;
   cursor: pointer;
@@ -86,21 +86,21 @@ button:hover {
 
 /* Botão azul */
 .btn-menu {
-  color: #0A4FFF;
-  border-color: #0A4FFF;
+  color: #002279;
+  border-color: #002279;
 }
 .btn-menu:hover {
-  background: #0A4FFF;
+  background: #002279;
   color: white;
 }
 
 /* Botão verde */
 .btn-cadastro {
-  color: #178d3f;
-  border-color: #178d3f;
+  color: #0a6428;
+  border-color: #0a6428;
 }
 .btn-cadastro:hover {
-  background: #178d3f;
+  background: #0a6428;
   color: white;
 }
 

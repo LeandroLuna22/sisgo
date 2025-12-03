@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Nota</title>
+<meta charset="UTF-8">
+<title>Criar Nota de Serviço</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+<h1>Criar Nota de Serviço</h1>
+
+<div class="container">
+  <form id="notaForm">
+    <label for="titulo">Título</label>
+    <input type="text" id="titulo" name="titulo" placeholder="Digite o título" required>
+
+    <label for="descricao">Descrição</label>
+    <textarea id="descricao" name="descricao" placeholder="Digite a descrição" required></textarea>
+
+    <label for="foto">Foto (opcional)</label>
+    <input type="file" id="foto" name="foto" accept="image/*">
+    <img id="preview" class="preview-img" src="" alt="" style="display:none;">
+
+    <button type="submit">Criar Nota</button>
+  </form>
+</div>
+
+<script src="js/criar-nota.js"></script>
 </body>
 </html>

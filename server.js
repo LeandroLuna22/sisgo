@@ -87,5 +87,10 @@ app.post('/cadastrar', auth, (req, res) => {
   });
 });
 
+// Rota para criar nota
+app.post('/criar-nota', auth, (req, res) => {
+  const { titulo, descricao, foto, usuario_id } = req.body;
+})
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
